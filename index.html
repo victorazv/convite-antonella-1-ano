@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Fazendinha da Antonella - 1 Ano</title>
+  <meta name="description" content="Venha celebrar o primeiro aniversario da Antonella com uma festa tematica de fazendinha!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="A Fazendinha da Antonella - 1 Ano" />
+  <meta property="og:description" content="Venha celebrar o primeiro aniversario da Antonella com uma festa tematica de fazendinha!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --farm-red: oklch(0.78 0.12 355);
+      --farm-barn: oklch(0.62 0.15 355);
+      --farm-sunflower: oklch(0.78 0.15 85);
+      --farm-sky: oklch(0.88 0.06 215);
+      --farm-grass: oklch(0.7 0.14 145);
+      --farm-cream: oklch(0.98 0.015 345);
+      --farm-wood: oklch(0.55 0.1 65);
+      --farm-chick: oklch(0.9 0.12 95);
+      --farm-pink-soft: oklch(0.95 0.03 350);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--farm-cream);
+      color: var(--farm-barn);
+      min-height: 100vh;
+    }
+
+    a { text-decoration: none; }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; overflow: hidden; }
+    .hero-inner { position: relative; width: 100%; height: 80vh; min-height: 560px; }
+    .hero-inner img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-fade {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 3rem;
+      background: linear-gradient(to bottom, transparent, var(--farm-cream));
+    }
+    .hero-title-wrap {
+      position: absolute; left: 0; right: 0; top: 1rem;
+      display: flex; justify-content: center; padding: 0 1rem;
+    }
+    .hero-card {
+      width: 100%; max-width: 36rem; border-radius: 1rem;
+      background: rgba(255,255,255,0.85); backdrop-filter: blur(4px);
+      padding: 0.75rem 2.5rem; text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    }
+    .hero-card h1 {
+      font-size: 1.875rem; font-weight: 900; line-height: 1.15;
+      letter-spacing: -0.02em; color: var(--farm-barn);
+    }
+    .hero-anos {
+      margin-top: 0.5rem; display: flex; align-items: center;
+      justify-content: center; gap: 0.5rem;
+    }
+    .hero-anos span {
+      font-size: 1.5rem; font-weight: 900; color: var(--farm-red);
+    }
+
+    /* ---------- Section ---------- */
+    .section { max-width: 42rem; margin: 0 auto; padding: 0.75rem 1rem; }
+
+    .panel {
+      border-radius: 1.5rem; background: #fff; padding: 1.25rem;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    }
+    .panel h2 {
+      margin-bottom: 1.5rem; text-align: center;
+      font-size: 1.875rem; font-weight: 900; color: var(--farm-barn);
+    }
+
+    .cards { display: flex; flex-direction: column; gap: 1rem; }
+
+    .info-card {
+      display: flex; align-items: flex-start; gap: 1.25rem;
+      border-radius: 1rem; background: var(--farm-pink-soft); padding: 1.25rem;
+    }
+    .icon-circle {
+      display: flex; height: 3.5rem; width: 3.5rem; flex-shrink: 0;
+      align-items: center; justify-content: center; border-radius: 9999px;
+    }
+    .icon-circle.sun { background: color-mix(in oklch, var(--farm-sunflower) 30%, transparent); }
+    .icon-circle.grass { background: color-mix(in oklch, var(--farm-grass) 30%, transparent); }
+    .icon-circle svg { width: 1.75rem; height: 1.75rem; color: var(--farm-barn); }
+
+    .info-body { flex: 1; }
+    .info-label {
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--farm-wood);
+    }
+    .info-title { font-size: 1.125rem; font-weight: 700; line-height: 1.2; color: var(--farm-barn); }
+    .info-sub { font-size: 0.875rem; color: var(--farm-wood); margin-bottom: 0.75rem; }
+
+    .btn-route {
+      display: flex; align-items: center; justify-content: center; gap: 0.375rem;
+      width: 100%; border-radius: 0.75rem; background: var(--farm-barn);
+      padding: 0.5rem 0; font-size: 0.875rem; font-weight: 700; color: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1); transition: opacity 0.2s;
+    }
+    .btn-route:hover { opacity: 0.9; }
+    .btn-route svg { width: 1rem; height: 1rem; }
+
+    /* ---------- RSVP ---------- */
+    .rsvp {
+      margin-top: 0.75rem; border-radius: 1.5rem; background: var(--farm-pink-soft);
+      padding: 1.25rem; text-align: center;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+    .rsvp h2 {
+      margin-bottom: 1rem; font-size: 1.25rem; font-weight: 900; color: var(--farm-barn);
+    }
+    .btn-rsvp {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      border-radius: 1rem; background: var(--farm-barn); padding: 0.75rem 1.5rem;
+      font-size: 1rem; font-weight: 700; color: #fff;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: transform 0.2s, opacity 0.2s;
+    }
+    .btn-rsvp:hover { transform: scale(1.05); opacity: 0.9; }
+    .btn-rsvp svg { width: 1.25rem; height: 1.25rem; }
+
+    /* ---------- Animals ---------- */
+    .animals {
+      display: flex; justify-content: center; padding: 0 1rem;
+      overflow: hidden; height: 340px;
+    }
+    .animals img {
+      max-width: 48rem; width: 100%; object-fit: contain; object-position: top;
+      filter: drop-shadow(0 10px 8px rgba(0,0,0,0.1));
+    }
+
+    /* ---------- Footer ---------- */
+    footer { background: var(--farm-barn); padding: 0.75rem 0; text-align: center; }
+    .footer-inner { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+    .footer-inner p { font-size: 1.125rem; font-weight: 700; color: #fff; }
+    .star { width: 1.25rem; height: 1.25rem; fill: var(--farm-sunflower); color: var(--farm-sunflower); }
+
+    @media (min-width: 640px) {
+      .hero-card { padding: 0.75rem 2.5rem; }
+      .hero-card h1 { font-size: 3rem; }
+      .hero-anos span { font-size: 1.875rem; }
+      .panel { padding: 2rem; }
+      .panel h2 { font-size: 2.25rem; }
+      .rsvp h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="farm-hero.jpg" alt="Ilustracao de fazendinha com animais fofos" />
+      <div class="hero-fade"></div>
+      <div class="hero-title-wrap">
+        <div class="hero-card">
+          <h1>A Fazendinha da Antonella</h1>
+          <div class="hero-anos">
+            <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+            <span>1 ANO</span>
+            <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event details -->
+  <section class="section">
+    <div class="panel">
+      <h2>Detalhes do Evento</h2>
+      <div class="cards">
+        <!-- Date & time -->
+        <div class="info-card">
+          <div class="icon-circle sun">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+          </div>
+          <div class="info-body">
+            <p class="info-label">Data &amp; Horário</p>
+            <p class="info-title">Sábado, 04 de Julho de 2026 às 15:00</p>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="info-card">
+          <div class="icon-circle grass">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="info-body">
+            <p class="info-label">Local</p>
+            <p class="info-title">Residencial Villa de Abrolhos</p>
+            <p class="info-sub">Alameda Catânia, 99-81 - Pituba, Salvador - BA</p>
+            <a class="btn-route" href="geo:-12.9864,-38.4813?q=Alameda+Cat%C3%A2nia+99,+Pituba,+Salvador,+BA" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              Como chegar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RSVP -->
+    <div class="rsvp">
+      <h2>Confirme sua presença</h2>
+      <a class="btn-rsvp" href="https://wa.me/5571999864407?text=Ol%C3%A1%2C%20gostaria%20de%20confirmar%20a%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%20Antonella" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+        Confirmar presença
+      </a>
+    </div>
+  </section>
+
+  <!-- Animals -->
+  <div class="animals">
+    <img src="farm-animals.png" alt="Animais da fazendinha" loading="lazy" width="1344" height="512" />
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+      <p>Antonella - 1 Aninho</p>
+      <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+    </div>
+  </footer>
+</body>
+</html>
